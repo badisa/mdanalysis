@@ -369,7 +369,7 @@ class GROWriter(base.WriterBase):
         .. versionchanged:: 0.16.0
            `frame` kwarg has been removed
         .. versionchanged:: 2.0.0
-           Deprecated support for calling with Timestep has nwo been removed.
+           Deprecated support for calling with Timestep has now been removed.
            Use AtomGroup or Universe as an input instead.
         """
         # write() method that complies with the Trajectory API
@@ -446,7 +446,7 @@ class GROWriter(base.WriterBase):
             output_gro.write(self.fmt['n_atoms'].format(ag.n_atoms))
 
             # Atom descriptions and coords
-            # Dont use enumerate here,
+            # Don't use enumerate here,
             # all attributes could be infinite cycles!
             for atom_index, resid, resname, name in zip(
                     range(ag.n_atoms), resids, resnames, names):
